@@ -1,0 +1,8 @@
+#include<stdio.h>
+
+int main() {
+    char str[200];
+    scanf("%s",str);
+    printf("May I know how to learn %s!!!...",str);
+    return 0;
+}
