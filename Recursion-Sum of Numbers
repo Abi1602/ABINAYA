@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int computeSum(int n) {
+    if(n==1)
+        return 1;
+    return n+computeSum(n-1);
+}
+int main() {
+    int n,sum = 0;
+    scanf("%d", &n);
+    if(n>=1&&n<=50){
+        sum=computeSum(n);
+        int temp=sum;
+        int digits=0;
+        for(int t=temp;t>0;t/=10)
+            digits++;
+        printf("The sum of numbers from 1 to %d : ", n);
+        for (int i=0;i<4-digits;i++)
+            printf("0");
+        printf("%d\n",sum);
+    } else {
+        printf("Enter a Valid Input!!!!!!!!!!!!!!!!!!\n");
+    }
+    return 0;
+}
