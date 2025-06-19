@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    char str[100];
+    int freq[256] = {0};  
+    scanf("%s",str);
+    for (int i=0;str[i]!='\0';i++){
+        freq[(unsigned char)str[i]]++;
+    }
+    int printed[256]={0};
+    for(int i=0;str[i]!='\0';i++){
+        if(!printed[(unsigned char)str[i]]) {
+            printf("%c\t%d\n",str[i],freq[(unsigned char)str[i]]);
+            printed[(unsigned char)str[i]]=1;
+        }
+    }
+
+    return 0;
+}
