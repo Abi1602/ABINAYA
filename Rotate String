@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+bool canBeShifted(char *s,char*goal) {
+    int len_s=strlen(s);
+    int len_g=strlen(goal);
+    if (len_s!=len_g)
+        return false;
+    char temp[201];  
+    strcpy(temp,s);
+    strcat(temp,s);  
+    return strstr(temp,goal)!=NULL;
+}
+
+int main() {
+    char s[101],goal[101];
+    scanf("%s",s);
+    scanf("%s",goal);
+
+    if (canBeShifted(s,goal))
+        printf("true\n");
+    else
+        printf("false\n");
+
+    return 0;
+}
