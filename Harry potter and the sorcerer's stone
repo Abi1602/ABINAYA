@@ -1,0 +1,17 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int n,fd,ld,sum;
+    scanf("%d",&n);
+    fd=n/1000;
+    ld=n%10;
+    sum=fd+ld;
+    printf("%d",sum);
+    return 0;
+}
