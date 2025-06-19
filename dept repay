@@ -1,0 +1,23 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int p,r,y;
+    float i,ta,d,fa;
+    scanf("%d%d%d",&p,&r,&y);
+    i=(p*r*y)/100.00;
+    ta=p+i;
+    d=0.02*i;
+    fa=ta-d;
+    printf("%.2f\n",i);
+    printf("%.2f\n",ta);
+    printf("%.2f\n",d);
+    printf("%.2f\n",fa);
+    
+    return 0;
+}
