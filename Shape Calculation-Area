@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#define M_PI 3.141592653589793
+
+int main() {
+    int side,length,breadth,radius,base,height,areaSquare,areaRectangle,areaTriangle ;
+    float areaCircle;
+
+    scanf("%d%d%d%d%d%d",&side,&length,&breadth,&radius,&base,&height);
+    areaSquare=side*side;
+    areaRectangle=length*breadth;
+    areaCircle=M_PI*radius*radius;
+    areaTriangle=0.5*base*height;
+
+    printf("Area of Square=%d\n",areaSquare);
+    printf("Area of Rectangle=%d\n",areaRectangle);
+    printf("Area of Circle=%.2f\n",floor(areaCircle*100)/100);
+    printf("Area of Triangle=%d\n",areaTriangle);
+
+    return 0;
+}
