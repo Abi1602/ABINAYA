@@ -1,0 +1,25 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int rows,cols,tree_num;
+    scanf("%d",&rows);
+    scanf("%d",&cols);
+    scanf("%d",&tree_num);
+    int mango_col1=2;
+    int mango_col2=cols-1;
+    int col_num=(tree_num%rows==0)?rows:(tree_num%rows);
+    int row_num=(tree_num+rows-1)/rows;
+    if(row_num==mango_col1||row_num==mango_col2){
+        printf("It is a mango tree");
+    }else{
+        printf("It is not a mango tree");
+    }
+
+    return 0;
+}
