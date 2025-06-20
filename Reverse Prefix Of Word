@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+void reversePrefix(char word[],charch){
+    int index=-1;
+    int i=0;
+    while(word[i]!='\0'){
+        if(word[i]==ch){
+            index=i;
+            break;
+        }
+        i++;
+    }
+    if(index!=-1){
+        int start=0,end=index;
+        while(start<end){
+            char temp=word[start];
+            word[start]=word[end];
+            word[end]=temp;
+            start++;
+            end--;
+        }
+    }
+    i=0;
+    while(word[i]!=('\0'){
+        putchar(word[i]);
+        i++;
+    }
+    putchar('\n');
+}
+
+int main(){
+    char word[260]; 
+    char ch;
+    scanf("%s",word);
+    scanf(" %c",&ch);
+    reversePrefix(word,ch);
+
+    return 0;
+}
